@@ -1,12 +1,11 @@
 const db = require("../config/connection");
-const {User, Book} = require("../models");
+const { User, Book } = require("../models");
 const userSeeds = require("./userSeeds.json");
 const bookSeeds = require("./bookSeeds.json");
 const userController = require("../controllers/user-controller");
 
 db.once("open", async () => {
   try {
-
     await User.deleteMany({});
 
     userSeeds.forEach((userSeed) => {
@@ -18,7 +17,6 @@ db.once("open", async () => {
 
     let users = await User.find({});
     console.log(users);
-
   } catch (err) {
     console.error(err);
     process.exit(1);
