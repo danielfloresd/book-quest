@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import React, {useEffect, useState} from 'react';
+import {
+  Button,
+  Card,
+  CardColumns,
+  Col,
+  Container,
+  Form,
+  Jumbotron
+} from 'react-bootstrap';
 
+import {saveBook, searchGoogleBooks} from '../utils/API';
 import Auth from '../utils/auth';
-import { saveBook, searchGoogleBooks } from '../utils/API';
-import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
+import {getSavedBookIds, saveBookIds} from '../utils/localStorage';
 
 const SearchBooks = () => {
   // create state for holding returned google api data
@@ -14,11 +22,10 @@ const SearchBooks = () => {
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
-  // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
-  // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
-  useEffect(() => {
-    return () => saveBookIds(savedBookIds);
-  });
+  // set up useEffect hook to save `savedBookIds` list to localStorage on
+  // component unmount learn more here:
+  // https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
+  useEffect(() => { return () => saveBookIds(savedBookIds); });
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
@@ -35,15 +42,16 @@ const SearchBooks = () => {
         throw new Error('something went wrong!');
       }
 
-      const { items } = await response.json();
+      const {items} = await response.json();
 
-      const bookData = items.map((book) => ({
-        bookId: book.id,
-        authors: book.volumeInfo.authors || ['No author to display'],
-        title: book.volumeInfo.title,
-        description: book.volumeInfo.description,
-        image: book.volumeInfo.imageLinks?.thumbnail || '',
-      }));
+      const bookData = items.map(
+          (book) => ({
+            bookId : book.id,
+            authors : book.volumeInfo.authors || [ 'No author to display' ],
+            title : book.volumeInfo.title,
+            description : book.volumeInfo.description,
+            image : book.volumeInfo.imageLinks?.thumbnail || '',
+          }));
 
       setSearchedBooks(bookData);
       setSearchInput('');
@@ -72,7 +80,7 @@ const SearchBooks = () => {
       }
 
       // if book successfully saves to user's account, save book id to state
-      setSavedBookIds([...savedBookIds, bookToSave.bookId]);
+      setSavedBookIds([...savedBookIds, bookToSave.bookId ]);
     } catch (err) {
       console.error(err);
     }
@@ -112,16 +120,18 @@ const SearchBooks = () => {
             : 'Search for a book to begin'}
         </h2>
         <CardColumns>
-          {searchedBooks.map((book) => {
-            return (
-              <Card key={book.bookId} border='dark'>
-                {book.image ? (
-                  <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' />
-                ) : null}
-                <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
+          {
+    searchedBooks.map(
+        (book) => {return (
+            <Card key = {book.bookId} border = 'dark'>{
+                book.image
+                    ? (<Card.Img src = {book.image} alt = {`The cover for ${
+                            book.title}`} variant = 'top' />)
+                    : null}<Card.Body><Card.Title>{book.title}<
+                /Card.Title>
                   <p className='small'>Authors: {book.authors}</p>
-                  <Card.Text>{book.description}</Card.Text>
+            <Card.Text>{book.description}<
+                /Card.Text>
                   {Auth.loggedIn() && (
                     <Button
                       disabled={savedBookIds?.some((savedBookId) => savedBookId === book.bookId)}
@@ -130,15 +140,12 @@ const SearchBooks = () => {
                       {savedBookIds?.some((savedBookId) => savedBookId === book.bookId)
                         ? 'This book has already been saved!'
                         : 'Save this Book!'}
-                    </Button>
-                  )}
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </CardColumns>
-      </Container>
-    </>
+                    </Button>)}<
+            /Card.Body>
+              </Card>);
+          })
+}</CardColumns>
+      </Container>< />
   );
 };
 

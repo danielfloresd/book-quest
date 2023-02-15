@@ -4,9 +4,7 @@ import decode from 'jwt-decode';
 // create a new class to instantiate for a user
 class AuthService {
   // get user data
-  getProfile() {
-    return decode(this.getToken());
-  }
+  getProfile() { return decode(this.getToken()); }
 
   // check if user's logged in
   loggedIn() {
@@ -21,7 +19,8 @@ class AuthService {
       const decoded = decode(token);
       if (decoded.exp < Date.now() / 1000) {
         return true;
-      } else return false;
+      } else
+        return false;
     } catch (err) {
       return false;
     }
