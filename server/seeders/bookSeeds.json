@@ -1,0 +1,66 @@
+[
+  {
+    "bookId": "vKsJAwAAQBAJ",
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "description": "This authoritative book provides a concise, in-depth look at JavaScript, a versatile language that can be used for web development, server-side programming, and more. The author presents the good parts of the language and explains why it is worth learning.",
+    "image": "http://books.google.com/books/content?id=vKsJAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=vKsJAwAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  },
+  {
+    "bookId": "1SPTAgAAQBAJ",
+    "title": "Eloquent JavaScript, 2nd Ed.",
+    "author": "Marijn Haverbeke",
+    "description": "This book is an introduction to programming in JavaScript, covering such topics as data structures, functions, and the browser environment. The second edition includes new chapters on Node.js, browser automation, and ECMAScript 6.",
+    "image": "http://books.google.com/books/content?id=1SPTAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=1SPTAgAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  },
+  {
+    "bookId": "d_0gAwAAQBAJ",
+    "title": "You Don't Know JS: Up & Going",
+    "author": "Kyle Simpson",
+    "description": "This book is the first in a series that provides a deep dive into the core mechanics of the JavaScript language. This volume covers the basics of JavaScript, including variables, values, functions, and control flow.",
+    "image": "http://books.google.com/books/content?id=d_0gAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=d_0gAwAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  },
+  {
+    "bookId": "JhQ2AAAAQBAJ",
+    "title": "JavaScript and jQuery: Interactive Front-End Web Development",
+    "author": "Jon Duckett",
+    "description": "This book provides a comprehensive introduction to front-end web development using JavaScript and jQuery. It covers everything from basic JavaScript concepts to advanced jQuery techniques.",
+    "image": "http://books.google.com/books/content?id=JhQ2AAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=JhQ2AAAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  },
+  {
+    "bookId": "S9iaDQAAQBAJ",
+    "title": "JavaScript: The Definitive Guide",
+    "author": "David Flanagan",
+    "description": "This comprehensive guide to JavaScript covers the language in depth, including its core features, object-oriented programming, and the latest ECMAScript standard. It also covers client-side and server-side programming, as well as web APIs.",
+    "image": "http://books.google.com/books/content?id=S9iaDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=S9iaDQAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  },
+  {
+    "bookId": "AZhbDwAAQBAJ",
+    "title": "Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript",
+    "author": "David Herman",
+    "description": "This book provides 68 specific ways to write better JavaScript code, covering topics such as data types, functions, objects, and code organization. It also includes tips for working with libraries and APIs.",
+    "image": "http://books.google.com/books/content?id=AZhbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=AZhbDwAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  },
+  {
+    "bookId": "V8QvCwAAQBAJ",
+    "title": "JavaScript Patterns",
+    "author": "Stoyan Stefanov",
+    "description": "This book provides a deep dive into the world of JavaScript patterns, covering topics such as module patterns, design patterns, and anti-patterns. It also includes real-world examples and best practices for using patterns effectively.",
+    "image": "http://books.google.com/books/content?id=V8QvCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=V8QvCwAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  },
+  {
+    "bookId": "c7dYDQAAQBAJ",
+    "title": "Mastering JavaScript Functional Programming",
+    "author": "Federico Kereki",
+    "description": "This book covers the concepts and techniques of functional programming in JavaScript, including higher-order functions, closures, currying, and recursion. It also includes practical examples and case studies of functional programming in real-world scenarios.",
+    "image": "http://books.google.com/books/content?id=c7dYDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "link": "http://books.google.com/books?id=c7dYDQAAQBAJ&dq=javascript&hl=&source=gbs_api"
+  }
+]
