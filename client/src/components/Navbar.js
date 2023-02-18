@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
-import SignUpForm from './SignupForm';
-import LoginForm from './LoginForm';
+import React, {useState} from 'react';
+import {Container, Modal, Nav, Navbar, Tab} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 import Auth from '../utils/auth2';
+
+import LoginForm from './LoginForm';
+import SignUpForm from './SignupForm';
 
 const AppNavbar = () => {
   // set modal display state

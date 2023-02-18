@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
+import React, {useEffect, useState} from 'react';
+import {Button, Card, CardColumns, Container, Jumbotron} from 'react-bootstrap';
 
-import { getMe, deleteBook } from '../utils/API';
+import {deleteBook, getMe} from '../utils/API';
 import Auth from '../utils/auth2';
-import { removeBookId } from '../utils/localStorage2';
+import {removeBookId} from '../utils/localStorage2';
 
 const SavedBooks = () => {
   const [userData, setUserData] = useState({});
@@ -34,9 +34,10 @@ const SavedBooks = () => {
     };
 
     getUserData();
-  }, [userDataLength]);
+  }, [ userDataLength ]);
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
+  // create function that accepts the book's mongo _id value as param and
+  // deletes the book from the database
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -62,7 +63,8 @@ const SavedBooks = () => {
 
   // if data isn't here yet, say so
   if (!userDataLength) {
-    return <h2>LOADING...</h2>;
+    return <h2>LOADING...<
+        /h2>;
   }
 
   return (
@@ -71,18 +73,19 @@ const SavedBooks = () => {
         <Container>
           <h1>Viewing saved books!</h1>
         </Container>
-      </Jumbotron>
-      <Container>
-        <h2>
-          {userData.savedBooks.length
-            ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
-            : 'You have no saved books!'}
-        </h2>
+      </Jumbotron><Container>
+        <h2>{userData.savedBooks.length
+                 ? `Viewing ${userData.savedBooks.length} saved ${
+                       userData.savedBooks.length === 1 ? 'book' : 'books'}:`
+                 : 'You have no saved books!'}<
+            /h2>
         <CardColumns>
           {userData.savedBooks.map((book) => {
             return (
               <Card key={book.bookId} border='dark'>
-                {book.image ? <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' /> : null}
+                {book.image ? <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' />:
+            null
+  }
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
                   <p className='small'>Authors: {book.authors}</p>
@@ -93,10 +96,10 @@ const SavedBooks = () => {
                 </Card.Body>
               </Card>
             );
-          })}
-        </CardColumns>
-      </Container>
-    </>
+          })
+}
+</CardColumns>
+      </Container>< />
   );
 };
 
