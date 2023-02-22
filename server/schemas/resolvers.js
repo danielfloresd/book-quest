@@ -5,9 +5,11 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
         me: async (parent, args, context) => {
+            console.log("ME QUERY", parent,args,context);
             if (context.user) {
                 const userData = await User.findOne({_id: context.user._id}).select("-_v -password"
                 );
+                console.log("ME QUERY", args,context,userData);
                 return userData;
             }
             throw new AuthenticationError("Not logged in");
