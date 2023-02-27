@@ -14,7 +14,7 @@ db.once("open", async () => {
     // Set random books for each user
     userSeeds.forEach((userSeed) => {
       const randomBooks = bookSeeds.sort(() => Math.random() - 0.5).slice(0, 2);
-      userSeed.savedBooks = randomBooks;
+      // userSeed.savedBooks = randomBooks;
 
     });
 
