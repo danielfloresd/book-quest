@@ -7,7 +7,9 @@
 Book Quest is the perfect app to help you find any book you're looking for.
 It seamlessly integrates with Google Books to give you access to millions of books and allows you to personalize your experience with saved searches and book lists.
 
-<img src="./public/assets/images/screenshot.jpg" width="500">
+<img src="./client/public/screenshot.jpg" width="350">
+
+<img src="./client/public/screenshot2.jpg" width="350">
 
 ## Table of contents
 
